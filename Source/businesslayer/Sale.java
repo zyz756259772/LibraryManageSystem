@@ -4,5 +4,5 @@ import datalayer.TradeInfoList;
 
 public interface Sale {
     TradeInfoList books=null;
-    void saleBook();
+    void saleBook(String bookNumber,int counts);
 }
