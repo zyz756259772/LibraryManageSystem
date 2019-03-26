@@ -8,3 +8,4 @@ public interface Books {
     List <BookInfo> inputBooks(InputStream books);
     void outputBooks();
 }
+
