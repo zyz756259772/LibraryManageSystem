@@ -15,6 +15,10 @@ public class BookInfoImp implements BookInfo{
         this.store = store;
     }
 
+    public BookInfoImp(){
+
+    }
+
     public String getBookNumber() {
         return bookNumber;
     }

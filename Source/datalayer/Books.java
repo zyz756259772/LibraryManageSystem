@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface Books {
     List <BookInfo> books=null;
-    List <BookInfo> inputBooks(InputStream books);
+    List <BookInfo> inputBooks(FileReader books);
     void outputBooks();
 }
 
