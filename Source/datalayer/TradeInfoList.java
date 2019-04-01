@@ -1,10 +1,13 @@
 package datalayer;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public interface TradeInfoList{
-    List<TradeInfo> tradeInfos=null;
-    List <Books> books=null;
+    ArrayList<TradeInfo> tradeInfos=null;
+    ArrayList <Books> books=null;
+    ArrayList getTradeInfos();
+    ArrayList getBooks();
     void outputTradeInfo();
 }
 

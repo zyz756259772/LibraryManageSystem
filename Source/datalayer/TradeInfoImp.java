@@ -2,18 +2,18 @@ package datalayer;
 
 public class TradeInfoImp {
     private String bookNumber=null;
-    private int priceSum=0;
+    private double priceSum=0;
     private String Date=null;
     private int Count=0;
 
-    public TradeInfoImp(String bookNumber, int priceSum, String date, int count) {
+    public TradeInfoImp(String bookNumber, double priceSum, String date, int count) {
         this.bookNumber = bookNumber;
         this.priceSum = priceSum;
         Date = date;
         Count = count;
     }
 
-    public int getPriceSum() {
+    public double getPriceSum() {
         return priceSum;
     }
 
