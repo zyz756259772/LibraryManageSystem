@@ -8,18 +8,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BooksImp implements Books{
-    private List<BookInfo> books=null;
+    private ArrayList<BookInfo> books=null;
 
-    public List<BookInfo> getBooks() {
+    public ArrayList <BookInfo> getBooks() {
         return books;
     }
 
-    public void setBooks(List<BookInfo> books) {
-        this.books = books;
-    }
-
-    public List <BookInfo> inputBooks(FileReader books){
+    public ArrayList <BookInfo> inputBooks(FileReader books){
         BufferedReader booksBuff=new BufferedReader(books);
+        this.books=new ArrayList<BookInfo>();
         try {
             String str;
             while ((str=booksBuff.readLine()) != null) {
@@ -27,14 +24,15 @@ public class BooksImp implements Books{
                 BookInfoImp book=new BookInfoImp();
                 book.setBookNumber(info[0]);
                 book.setName(info[1]);
-                book.setPrice(Double.parseDouble(info[2]));
-                book.setPublisher(info[3]);
+                book.setPublisher(info[2]);
+                book.setPrice(Double.parseDouble(info[3]));
                 book.setStore(Integer.parseInt(info[4]));
-                books=new ArrayList<BookInfo>();
+                this.books.add(book);
             }
         }catch(Exception e){
             e.printStackTrace();
         }
+        return this.books;
     }
 
     public void outputBooks(){

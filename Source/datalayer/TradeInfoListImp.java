@@ -1,28 +1,30 @@
 package datalayer;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
+public class TradeInfoListImp implements TradeInfoList {
+    private ArrayList<Books> books=null;
+    private ArrayList<TradeInfo> tradeInfos=null;
 
-public class TradeInfoListImp {
-    private List<Books> books=null;
-    private List<TradeInfo> tradeInfos=null;
-
-    public List<TradeInfo> getTradeInfos() {
+    public ArrayList<TradeInfo> getTradeInfos() {
         return tradeInfos;
     }
 
-    public void setTradeInfos(List<TradeInfo> tradeInfos) {
+    public void setTradeInfos(ArrayList<TradeInfo> tradeInfos) {
         this.tradeInfos = tradeInfos;
     }
 
-    public List<Books> getBooks() {
+
+    public ArrayList<Books> getBooks() {
         return books;
     }
 
-    public void setBooks(List<Books> books) {
+    public void setBooks(ArrayList<Books> books) {
         this.books = books;
     }
 
-    void outputTradeInfo(){
+    public void outputTradeInfo(){
 
     }
 
