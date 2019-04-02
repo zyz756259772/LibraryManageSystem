@@ -13,14 +13,14 @@ import java.util.Scanner;
 public class LibraryManagerImp {
     private List<Books> books=null;
 
-    public  void main(String[] args){
+    public static void  main(String[] args){
         String bookNumber;
         int counts;
         int keep=0;
         BooksImp books = new BooksImp();
         TradeInfoListImp trade = new TradeInfoListImp();
         try {
-            books.inputBooks(new FileReader("C:/Users/Administrator/Desktop/books.csv"));
+            books.inputBooks(new FileReader("C:\\Users\\zyz\\Documents\\GitHub\\LibraryManageSystem\\Source\\books.csv"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
