@@ -16,6 +16,9 @@ public class BookInfoImp implements BookInfo{
     }
 
     public BookInfoImp(){
+
+
+
     }
 
     public String getBookNumber() {

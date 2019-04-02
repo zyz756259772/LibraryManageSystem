@@ -27,6 +27,7 @@ public class SaleImp {
                     TradeInfoImp Trade = new TradeInfoImp(bookNumber,counts*it.next().getPrice(),date.toString(),counts);
                     books.getTradeInfos().add(Trade);
                     System.out.println("DEAL FINISHED!");
+                    System.out.println("bookNumber:"+bookNumber+"\ncount:"+counts+"sum:"+counts*it.next().getPrice());
                 }else{
                     System.out.println("the store is less than your required!");
                 }
