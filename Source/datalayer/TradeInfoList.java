@@ -8,6 +8,6 @@ public interface TradeInfoList{
     ArrayList <Books> books=null;
     ArrayList getTradeInfos();
     ArrayList getBooks();
-    void outputTradeInfo();
-}
+    boolean writeFile(ArrayList trades);}
+
 

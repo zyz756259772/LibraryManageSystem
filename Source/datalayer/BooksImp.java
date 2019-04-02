@@ -1,9 +1,6 @@
 package datalayer;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileReader;
-import java.io.InputStream;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,8 +32,26 @@ public class BooksImp implements Books{
         return this.books;
     }
 
-    public void outputBooks(){
-
+    public boolean writeFile(ArrayList books) {
+        String filename = "C:/Users/Administrator/Desktop/books.csv";
+        try {
+            File f = new File(filename);
+            if (!f.exists()) {
+                f.createNewFile();
+            }
+            OutputStreamWriter write = new OutputStreamWriter(new FileOutputStream(f));
+            BufferedWriter writer = new BufferedWriter(write);
+            do{
+                writer.write(books.iterator().toString());
+                writer.flush();
+            }while(books.iterator().hasNext());
+            write.close();
+            writer.close();
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return false;
     }
 
 }
